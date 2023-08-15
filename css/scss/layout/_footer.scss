@@ -1,0 +1,46 @@
+/* START FOOTER*/
+footer {
+  background-color: $white-color;
+  padding-top: $padding-space / 2;
+  padding-bottom: $padding-space / 2;
+  .body-footer {
+    display: flex;
+    @include responsev("mobile"){
+      flex-direction: column;
+      // align-items: center;
+    }
+    ul {
+      flex: 1 1 0%;
+      @include responsev("mobile"){
+        flex: 0;
+        // text-align: center;
+      }
+      li.caption {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        color: $gray-color;
+      }
+      li {
+        a {
+          font-size: 1.4rem;
+          text-transform: capitalize;
+        }
+      }
+      }
+      .logo-footer{
+      flex: 1 1 0%;
+      @include responsev("mobile"){
+        flex: 0;
+      }
+    }
+    a.logo {
+      font-size: 3rem;
+      color: black;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+  
+}
+/* END FOOTER*/

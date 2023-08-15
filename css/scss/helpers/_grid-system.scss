@@ -1,0 +1,23 @@
+/* START CONTAINER RESPONSEV
+ FROM: _grid-system.scss*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include responsev("mobile") {
+    max-width: 650px;
+  }
+  @include responsev("small") {
+    max-width: 990px;
+  }
+  @include responsev("medium") {
+    max-width: 1200px;
+  }
+  @include responsev(large) {
+    max-width: 1500px;
+  }
+}
+/* END CONTAINER RESPONSEV
+ FROM: _grid-system.scss*/
+ 

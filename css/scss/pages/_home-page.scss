@@ -1,0 +1,308 @@
+/* START HERO SECTION*/
+.main-hero {
+  padding-top: $padding-space;
+  padding-bottom: $padding-space;
+  .container {
+    display: flex;
+    align-items: center;
+    @include responsev("mobile") {
+      flex-direction: column;
+    }
+    .text {
+      color: $white-color;
+      @include responsev("mobile") {
+        text-align: center;
+      }
+      .top {
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        @include responsev("mobile") {
+          font-size: 1.4rem;
+        }
+      }
+      .title {
+        font: {
+          size: 5rem;
+          weight: 700;
+        }
+        text-transform: capitalize;
+        margin: 25px 0px;
+      }
+      .bottom {
+        text-transform: capitalize;
+        font-size: 2rem;
+        line-height: 1.25;
+      }
+      button {
+        @include prefixer(box-shadow, 0px 0px 4px #0000004a, webkit moz o ms);
+      }
+    }
+    .image {
+      width: 550px;
+      @include responsev("mobile") {
+        width: 330px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+/* END HERO SECTION*/
+/*START ABOUT SECTION*/
+.about-section {
+  padding-top: $padding-space;
+  padding-bottom: $padding-space;
+  background-color: $white-color;
+  border-bottom: 1px solid #ddd;
+  h2.head-title {
+    @extend %head-title;
+  }
+  .container .about {
+    display: flex;
+    justify-content: center;
+    @include responsev("mobile") {
+      flex-direction: column;
+      align-items: center;
+    }
+    .text {
+      width: 550px;
+      @include responsev("mobile") {
+        text-align: center;
+      }
+      h3 {
+        font: {
+          size: 3rem;
+          weight: bold;
+        }
+        text-transform: capitalize;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      p {
+        color: $gray-color;
+        font-size: 1.5rem;
+      }
+    }
+    .image {
+      width: 400px;
+      margin-top: 30px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+/*END ABOUT SECTION*/
+/* START PROJECT SECTION*/
+.projects-section {
+  padding-top: $padding-space;
+  padding-bottom: $padding-space;
+  background-color: $white-color;
+  border-bottom: 1px solid #ddd;
+  h2.head-title {
+    @extend %head-title;
+  }
+  .container .projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+    .project {
+      padding: 20px;
+      width: (100% / 3);
+      @include responsev("mobile") {
+        width: 100%;
+      }
+      @include responsev("small") {
+        width: (100% / 2);
+      }
+      @include responsev("large") {
+        width: (100% / 3);
+      }
+    }
+    .box {
+      border-radius: 3px;
+      .text {
+        background-color: $white-color;
+        @include prefixer(
+          box-shadow,
+          0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          webkit moz o ms
+        );
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        overflow: hidden;
+        line-height: 1.5;
+        & > :is(.top-text, h4, .bottom-text) {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .top-text {
+          text-transform: uppercase;
+          color: $text-color;
+          font-size: 1.2rem;
+          /* margin-bottom: 10px; */
+        }
+        h4 {
+          font: {
+            size: 2rem;
+            weight: bold;
+          }
+        }
+        .bottom-text {
+          font-size: 1.5rem;
+          color: $gray-color;
+          margin-bottom: 25px;
+          line-height: 1.5;
+        }
+      }
+      .btn-div {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        background-color: $white-color;
+        @include prefixer(
+          box-shadow,
+          0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          webkit moz o ms
+        );
+        &.start {
+          justify-content: flex-start;
+        }
+        &.center {
+          justify-content: center;
+        }
+        &.end {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+/*END PROJECT SECTION*/
+/* START PRICING SECTION */
+.pricing-section {
+  padding-top: $padding-space;
+  padding-bottom: $padding-space;
+  background-color: #f3f4f6;
+  h2.head-title {
+    @extend %head-title;
+  }
+  .pricing {
+    margin-top: $padding-space;
+    display: flex;
+    justify-content: center;
+    @include responsev("mobile") {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+    .box {
+      width: (75% / 3);
+      background-color: $white-color;
+      text-align: center;
+      @include prefixer(
+        box-shadow,
+        0px 1px 3px rgb(0 0 0 / 15%),
+        webkit moz ms o
+      );
+      overflow: hidden;
+      border-radius: 3px;
+      color: $gray-color;
+
+      h5.head {
+        font-size: 4rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 25px;
+      }
+      span.line-head {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #f3f4f6;
+      }
+      .price {
+        ul.list {
+          margin-bottom: 25px;
+          li {
+            font-size: 1.5rem;
+            font-weight: 400;
+            border-bottom: 1px solid #f3f4f6;
+            padding: 10px;
+            text-transform: capitalize;
+          }
+        }
+      }
+      &:is(.on) {
+        @include responsev("small") {
+          margin-top: -20px;
+          @include prefixer(
+            box-shadow,
+            0px 1px 3px rgb(0 0 0 / 20%),
+            webkit moz ms o
+          );
+          width: calc(100% / 3 + 20px);
+        }
+        color: black;
+        z-index: 1;
+        span.line-head {
+          background: linear-gradient(
+            90deg,
+            $main-color 0%,
+            $second-color 100%
+          );
+        }
+        ul.list {
+          li {
+            font-weight: 600;
+          }
+        }
+      }
+      @include responsev("mobile") {
+        width: 100%;
+      }
+    }
+    .price-footer {
+      padding: 25px;
+      p.desc {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+        span {
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+}
+/* END PRICING SECTION */
+/* START ACTION SECTION*/
+.action-section {
+  padding-top: $padding-space;
+  padding-bottom: $padding-space;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2.head-title {
+    @extend %head-title;
+    color: $white-color;
+    &::before{
+      background: $white-color;
+    }
+  }
+  p {
+    margin-top: 30px;
+    font-size: 2.7rem;
+    color: $white-color;
+    text-transform: capitalize;
+  }
+  button.white-btn {
+    display: block;
+    margin: 15px auto 0px;
+    @include prefixer(box-shadow, 0px 0px 4px #0000004a, webkit moz o ms);
+  }
+}
+/* END ACTION SECTION*/

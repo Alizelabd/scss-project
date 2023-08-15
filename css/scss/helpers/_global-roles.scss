@@ -1,0 +1,25 @@
+/*START GLOBAL ROLES
+FROM: _global-roles.scss*/
+* {
+  @include prefixer(box-sizing, border-box, webkit moz o ms);
+  margin: 0;
+  padding: 0;
+  transition: .5s ease;
+}
+html{
+    font-size: 12px;
+}
+body{
+    font-family: 'Source Sans 3', sans-serif;
+    background: linear-gradient(90deg, $main-color 0%, $second-color 100%);
+    background-repeat: no-repeat;
+}
+ul,li{
+    list-style-type: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/*END GLOBAL ROLES
+FROM: _global-roles.scss*/

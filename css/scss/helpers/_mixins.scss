@@ -1,0 +1,29 @@
+@mixin prefixer($proprty, $value, $prefixes: ()) {
+  #{$proprty}: $value;
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $proprty}: $value;
+  }
+}
+@mixin responsev($point) {
+  @if $point == "mobile" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == "small" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == "medium" {
+    @media (min-width: 991px) {
+      @content;
+    }
+  }
+  @if $point == "large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+

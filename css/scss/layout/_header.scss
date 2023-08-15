@@ -1,0 +1,55 @@
+/*Start Header*/
+header {
+  padding: 15px;
+  border-bottom: 2px solid #f5f5ff87;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include responsev("mobile"){
+      flex-direction: column;
+      justify-content: center;
+    }
+    a.logo {
+      font-size: 3rem;
+      color: $white-color;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    ul {
+      display: flex;
+      @include responsev("mobile"){
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+      li{
+        &:not(:last-child){
+          margin-right: 30px;
+        }
+        a {
+          font-size: 1.5rem;
+          color: black;
+        }
+        a.active {
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+        a.action {
+          text-transform: capitalize;
+          color: $text-color;
+          background-color: #fff;
+          opacity: 0.75;
+          padding: 15px 25px;
+          border-radius: $border-radMax;
+          font-weight: bold;
+          @include prefixer(box-shadow, 0px 0px 4px #0000004a, webkit moz o ms);
+        }
+        a.action:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+/*End Header*/

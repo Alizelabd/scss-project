@@ -1,0 +1,49 @@
+button {
+  cursor: pointer;
+}
+button.main-btn {
+  background: linear-gradient(90deg, $main-color 0%, $second-color 100%);
+  border-radius: $border-radMax;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 1.6rem;
+  box-shadow: 0px 0px 4px #0000004a;
+  padding: 20px 30px;
+  font-weight: 700;
+  border: 0;
+}
+
+button.white-btn {
+  padding: 20px 30px;
+  background-color: $white-color;
+  color: $text-color;
+  border: 0;
+  border-radius: $border-radMax;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 45px;
+}
+button.main-btn:hover,
+button.white-btn:hover {
+  text-decoration: underline;
+}
+// Main Title Head
+%head-title {
+  text-transform: capitalize;
+  position: relative;
+  text-align: center;
+  font-size: 3.5rem;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    background: linear-gradient(90deg, $main-color 0%, $second-color 100%);
+    width: 190px;
+    height: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.25;
+    border-radius: 3px 0px;
+  }
+}
