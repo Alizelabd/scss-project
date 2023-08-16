@@ -21,12 +21,13 @@
         }
       }
       .title {
-        font: {
-          size: 5rem;
-          weight: 700;
-        }
+        font-size: 5rem;
+        font-weight: 700;
         text-transform: capitalize;
         margin: 25px 0px;
+        @include responsev("mobile"){
+          font-size: 3.5rem;
+        }
       }
       .bottom {
         text-transform: capitalize;
@@ -40,7 +41,7 @@
     .image {
       width: 550px;
       @include responsev("mobile") {
-        width: 330px;
+        display: none;
       }
       img {
         width: 100%;
@@ -66,14 +67,14 @@
       align-items: center;
     }
     .text {
-      width: 550px;
       @include responsev("mobile") {
         text-align: center;
       }
       h3 {
-        font: {
-          size: 3rem;
-          weight: bold;
+        font-size: 3rem;
+        font-weight: bold;
+        @include responsev("mobile"){
+          font-size: 1.9rem;
         }
         text-transform: capitalize;
         margin-top: 50px;
@@ -85,8 +86,9 @@
       }
     }
     .image {
-      width: 400px;
+      max-width: 400px;
       margin-top: 30px;
+      
       img {
         width: 100%;
       }
